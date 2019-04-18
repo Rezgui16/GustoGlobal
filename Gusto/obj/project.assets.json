@@ -1706,11 +1706,11 @@
       "Microsoft.EntityFrameworkCore.Analyzers/2.2.4": {
         "type": "package"
       },
-      "Microsoft.EntityFrameworkCore.Design/2.2.0": {
+      "Microsoft.EntityFrameworkCore.Design/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.0"
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -4444,6 +4444,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Design": "2.2.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
         },
         "compile": {
@@ -5936,10 +5937,10 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/2.2.0": {
-      "sha512": "cl26EJJogpPN8/Fd1L4hXfiiVgJoWw0XZ+e/723SjSDDZLnd8gRY7zzhCb2OA7XbURUxkwidozJ97qH8+36XUQ==",
+    "Microsoft.EntityFrameworkCore.Design/2.2.4": {
+      "sha512": "4SfnD7wYxr+OzcPOZYlzPtKtL1cdXk+a8g4bKc8QcgaGhpvVOTK5ROTZaOe10tmvFXFEJVZSGtXpFAbgiDFtjg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.design/2.2.0",
+      "path": "microsoft.entityframeworkcore.design/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5949,7 +5950,7 @@
         "lib/net461/Microsoft.EntityFrameworkCore.Design.xml",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.2.2.4.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
@@ -12099,11 +12100,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Soumia\\Desktop\\CodeFirstTest\\Gusto\\Gusto.csproj",
+      "projectUniqueName": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\Gusto.csproj",
       "projectName": "Gusto",
-      "projectPath": "C:\\Users\\Soumia\\Desktop\\CodeFirstTest\\Gusto\\Gusto.csproj",
+      "projectPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\Gusto.csproj",
       "packagesPath": "C:\\Users\\Soumia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Soumia\\Desktop\\CodeFirstTest\\Gusto\\obj\\",
+      "outputPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12122,8 +12123,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Soumia\\Desktop\\CodeFirstTest\\GustoLib\\GustoLib.csproj": {
-              "projectPath": "C:\\Users\\Soumia\\Desktop\\CodeFirstTest\\GustoLib\\GustoLib.csproj"
+            "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj": {
+              "projectPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj"
             }
           }
         }

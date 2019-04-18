@@ -16,6 +16,7 @@ namespace GustoLib.Data
         public string Pseudo { get; set; }
         public string Status { get; set; }
         public DateTime DateInscription { get; set; }
-
+       
+        public ICollection<Favoris> Favoris { get; set; }
     }
 }

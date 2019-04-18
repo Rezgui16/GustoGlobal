@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gusto.Migrations
 {
     [DbContext(typeof(GustoDbContext))]
-    [Migration("20190418105708_Init")]
+    [Migration("20190418142250_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,15 +99,11 @@ namespace Gusto.Migrations
 
             modelBuilder.Entity("GustoLib.Data.Favoris", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<int>("RecetteID");
 
                     b.Property<string>("UserID");
 
-                    b.HasKey("ID");
+                    b.HasKey("RecetteID", "UserID");
 
                     b.HasIndex("UserID");
 
@@ -168,8 +164,6 @@ namespace Gusto.Migrations
 
                     b.Property<float>("Moyenne");
 
-                    b.Property<int?>("Recette");
-
                     b.Property<int>("TempsCuisson");
 
                     b.Property<string>("Titre");
@@ -179,8 +173,6 @@ namespace Gusto.Migrations
                     b.HasKey("ID");
 
                     b.HasIndex("CategorieID");
-
-                    b.HasIndex("Recette");
 
                     b.HasIndex("UserID");
 
@@ -395,9 +387,15 @@ namespace Gusto.Migrations
 
             modelBuilder.Entity("GustoLib.Data.Favoris", b =>
                 {
+                    b.HasOne("GustoLib.Data.Recette", "Recette")
+                        .WithMany("Favoris")
+                        .HasForeignKey("RecetteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("GustoLib.Data.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserID");
+                        .WithMany("Favoris")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("GustoLib.Data.Note", b =>
@@ -418,10 +416,6 @@ namespace Gusto.Migrations
                         .WithMany()
                         .HasForeignKey("CategorieID")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("GustoLib.Data.Favoris")
-                        .WithMany("Recette")
-                        .HasForeignKey("Recette");
 
                     b.HasOne("GustoLib.Data.User", "User")
                         .WithMany()

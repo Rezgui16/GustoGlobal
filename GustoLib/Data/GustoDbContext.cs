@@ -20,8 +20,24 @@ namespace GustoLib.Data
         public  DbSet<Note> Note { get; set; }
         public  DbSet<Recette>Recette { get; set; }
         public  DbSet<User> User { get; set; }
-        
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Favoris>()
+                .HasKey(t => new { t.RecetteID, t.UserID });
+
+            modelBuilder.Entity<Favoris>()
+                .HasOne(pt => pt.User)
+                .WithMany(p => p.Favoris)
+                .HasForeignKey(pt => pt.UserID);
+
+            modelBuilder.Entity<Favoris>()
+                .HasOne(pt => pt.Recette)
+                .WithMany(t => t.Favoris)
+                .HasForeignKey(pt => pt.RecetteID);
+        }
 
 
     }

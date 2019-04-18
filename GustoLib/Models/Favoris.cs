@@ -10,14 +10,20 @@ namespace GustoLib.Data
     public class Favoris
     {
         
-        public int ID { get; set; }
         public string UserID { get; set; }
+        
+     
+        public User User { get; set; }
+
+     
         public int RecetteID { get; set; }
 
+    
+        public Recette Recette { get; set; }
 
-        [ForeignKey("UserID")]
-        public User User { get; set; }
-        [ForeignKey("Recette")]
-        public ICollection<Recette> Recette { get; set; }
+      
+        
+
+
     }
 }

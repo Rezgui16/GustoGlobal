@@ -20,12 +20,15 @@ namespace GustoLib.Data
         public string LienPhoto { get; set; }
         public string UserID { get; set; }
         public int CategorieID { get; set; }
+        
 
         [ForeignKey("UserID")]
         public  User User { get; set; }
         [ForeignKey("CategorieID")]
         public  Categorie Categorie { get; set; }
-      
+
+        public ICollection<Favoris> Favoris { get; set; }
+
 
     }
 }

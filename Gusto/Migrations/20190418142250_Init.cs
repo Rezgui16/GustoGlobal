@@ -188,26 +188,6 @@ namespace Gusto.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Favoris",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    UserID = table.Column<string>(nullable: true),
-                    RecetteID = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Favoris", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Favoris_AspNetUsers_UserID",
-                        column: x => x.UserID,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Recette",
                 columns: table => new
                 {
@@ -221,8 +201,7 @@ namespace Gusto.Migrations
                     Compteur = table.Column<int>(nullable: false),
                     LienPhoto = table.Column<string>(nullable: true),
                     UserID = table.Column<string>(nullable: true),
-                    CategorieID = table.Column<int>(nullable: false),
-                    Recette = table.Column<int>(nullable: true)
+                    CategorieID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -232,19 +211,13 @@ namespace Gusto.Migrations
                         column: x => x.CategorieID,
                         principalTable: "Categorie",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Recette_Favoris_Recette",
-                        column: x => x.Recette,
-                        principalTable: "Favoris",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Recette_AspNetUsers_UserID",
                         column: x => x.UserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -265,13 +238,13 @@ namespace Gusto.Migrations
                         column: x => x.RecetteID,
                         principalTable: "Recette",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Avis_AspNetUsers_UserID",
                         column: x => x.UserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -292,13 +265,13 @@ namespace Gusto.Migrations
                         column: x => x.IngredientID,
                         principalTable: "Ingredient",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Composer_Recette_RecetteID",
                         column: x => x.RecetteID,
                         principalTable: "Recette",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -319,7 +292,31 @@ namespace Gusto.Migrations
                         column: x => x.RecetteID,
                         principalTable: "Recette",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Favoris",
+                columns: table => new
+                {
+                    UserID = table.Column<string>(nullable: false),
+                    RecetteID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Favoris", x => new { x.RecetteID, x.UserID });
+                    table.ForeignKey(
+                        name: "FK_Favoris_Recette_RecetteID",
+                        column: x => x.RecetteID,
+                        principalTable: "Recette",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Favoris_AspNetUsers_UserID",
+                        column: x => x.UserID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -340,13 +337,13 @@ namespace Gusto.Migrations
                         column: x => x.RecetteID,
                         principalTable: "Recette",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Note_AspNetUsers_UserID",
                         column: x => x.UserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -434,11 +431,6 @@ namespace Gusto.Migrations
                 column: "CategorieID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Recette_Recette",
-                table: "Recette",
-                column: "Recette");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Recette_UserID",
                 table: "Recette",
                 column: "UserID");
@@ -471,6 +463,9 @@ namespace Gusto.Migrations
                 name: "Etape");
 
             migrationBuilder.DropTable(
+                name: "Favoris");
+
+            migrationBuilder.DropTable(
                 name: "Note");
 
             migrationBuilder.DropTable(
@@ -484,9 +479,6 @@ namespace Gusto.Migrations
 
             migrationBuilder.DropTable(
                 name: "Categorie");
-
-            migrationBuilder.DropTable(
-                name: "Favoris");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
