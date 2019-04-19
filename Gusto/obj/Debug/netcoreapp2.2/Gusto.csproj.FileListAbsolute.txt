@@ -109,3 +109,8 @@ C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Ad
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categories\Details.g.cshtml.cs
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categories\Edit.g.cshtml.cs
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categories\Index.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Recettes\Create.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Recettes\Delete.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Recettes\Details.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Recettes\Edit.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Recettes\Index.g.cshtml.cs
