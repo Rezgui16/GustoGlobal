@@ -44,3 +44,4 @@ D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfoInpu
 D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfo.cs
 D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.dll
 D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.pdb
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.csprojAssemblyReference.cache
