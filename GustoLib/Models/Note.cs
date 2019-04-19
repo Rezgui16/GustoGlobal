@@ -11,7 +11,11 @@ namespace GustoLib.Data
     {
         
         public int ID { get; set; }
+
+        [Range(1, 5)]
+        [Display(Name = "Notation", Prompt = "Donner une note entre 1 et 5")]
         public int Notation { get; set; }
+
         public string UserID { get; set; }
         public int RecetteID{ get; set; }
 

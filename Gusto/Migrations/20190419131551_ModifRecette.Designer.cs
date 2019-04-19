@@ -4,14 +4,16 @@ using GustoLib.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Gusto.Migrations
 {
     [DbContext(typeof(GustoDbContext))]
-    partial class GustoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190419131551_ModifRecette")]
+    partial class ModifRecette
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,12 +86,9 @@ namespace Gusto.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Instruction")
-                        .IsRequired();
+                    b.Property<string>("Instruction");
 
-                    b.Property<string>("Nom")
-                        .IsRequired()
-                        .HasMaxLength(9);
+                    b.Property<string>("Nom");
 
                     b.Property<int>("RecetteID");
 
@@ -119,13 +118,9 @@ namespace Gusto.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("Name");
 
-                    b.Property<string>("Unite")
-                        .IsRequired()
-                        .HasMaxLength(10);
+                    b.Property<string>("Unite");
 
                     b.HasKey("ID");
 
@@ -210,13 +205,9 @@ namespace Gusto.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstMidName")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("FirstMidName");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -233,6 +224,8 @@ namespace Gusto.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Pseudo");
 
                     b.Property<string>("SecurityStamp");
 
