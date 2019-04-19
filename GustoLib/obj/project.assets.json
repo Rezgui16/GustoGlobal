@@ -4480,23 +4480,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Soumia\\.nuget\\packages\\": {},
+    "C:\\Users\\Baishali BARUA\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj",
+      "projectUniqueName": "C:\\Users\\Baishali BARUA\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj",
       "projectName": "GustoLib",
-      "projectPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj",
-      "packagesPath": "C:\\Users\\Soumia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\obj\\",
+      "projectPath": "C:\\Users\\Baishali BARUA\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj",
+      "packagesPath": "C:\\Users\\Baishali BARUA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Baishali BARUA\\Desktop\\GustoGlobal\\GustoLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Soumia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Baishali BARUA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

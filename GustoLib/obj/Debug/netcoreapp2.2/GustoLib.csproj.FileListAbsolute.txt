@@ -34,3 +34,14 @@ D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.js
 D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.dev.json
 D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.dll
 D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.pdb
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.deps.json
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.json
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.dev.json
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.dll
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.pdb
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.csprojAssemblyReference.cache
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.csproj.CoreCompileInputs.cache
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfoInputs.cache
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfo.cs
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.dll
+C:\Users\Baishali BARUA\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.pdb
