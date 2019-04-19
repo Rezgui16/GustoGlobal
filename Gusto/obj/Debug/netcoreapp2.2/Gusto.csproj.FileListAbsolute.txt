@@ -94,3 +94,8 @@ D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Gusto.Views.pdb
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Gusto.csproj.CopyComplete
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Gusto.dll
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Gusto.pdb
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Create.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Delete.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Details.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Edit.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Index.g.cshtml.cs
