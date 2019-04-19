@@ -9,14 +9,10 @@ using GustoLib.Data;
 
 namespace Gusto.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class RecettesController : Controller
+    public class RecettesController : BaseAdminController
     {
-        private readonly GustoDbContext _context;
-
-        public RecettesController(GustoDbContext context)
+        public RecettesController(GustoDbContext context) : base(context)
         {
-            _context = context;
         }
 
         // GET: Admin/Recettes

@@ -8,17 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
 
 namespace Gusto.Areas.Admin.Controllers
-{
-    [Area("Admin")]
-    public class AvisController : Controller
+{  
+    public class AvisController : BaseAdminController
     {
-        private readonly GustoDbContext _context;
-
-        public AvisController(GustoDbContext context)
+        public AvisController(GustoDbContext context) : base(context)
         {
-            _context = context;
         }
-
         // GET: Admin/Avis
         public async Task<IActionResult> Index()
         {

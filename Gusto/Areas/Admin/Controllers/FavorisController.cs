@@ -9,14 +9,10 @@ using GustoLib.Data;
 
 namespace Gusto.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class FavorisController : Controller
+    public class FavorisController : BaseAdminController
     {
-        private readonly GustoDbContext _context;
-
-        public FavorisController(GustoDbContext context)
+        public FavorisController(GustoDbContext context) : base(context)
         {
-            _context = context;
         }
 
         // GET: Admin/Favoris

@@ -9,14 +9,10 @@ using GustoLib.Data;
 
 namespace Gusto.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class NotesController : Controller
+    public class NotesController : BaseAdminController
     {
-        private readonly GustoDbContext _context;
-
-        public NotesController(GustoDbContext context)
+        public NotesController(GustoDbContext context) : base(context)
         {
-            _context = context;
         }
 
         // GET: Admin/Notes
