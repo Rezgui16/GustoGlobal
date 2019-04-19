@@ -9,12 +9,19 @@ namespace GustoLib.Data
 {
     public class User: IdentityUser
     {
+        [Display(Name = "LastName", Prompt = "Rezgui")]
+        [StringLength(50)]
+        [Required]
         public string LastName { get; set; }
+        [Display(Name = "FirstName", Prompt = "Soumia")]
+        [StringLength(50)]
+        [Required]
         public string FirstMidName { get; set; }
+        [Required]
         public DateTime DateNaissance { get; set; }
-
-        public string Pseudo { get; set; }
+        
         public string Status { get; set; }
+        
         public DateTime DateInscription { get; set; }
        
         public ICollection<Favoris> Favoris { get; set; }
