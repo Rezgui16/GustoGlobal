@@ -1,0 +1,46 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form method="post" asp-action="Register" asp-controller="Account" novalidate>
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmedPassword"></label>
+        <input asp-for="ConfirmedPassword" class="form-control" />
+        <span class="text-danger" asp-validation-for="ConfirmedPassword"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span class="text-danger" asp-validation-for="LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstMidName"></label>
+        <input asp-for="FirstMidName" class="form-control" />
+        <span class="text-danger" asp-validation-for="FirstMidName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DateNaissance"></label>
+        <input asp-for="DateNaissance" class="form-control" />
+        <span class="text-danger" asp-validation-for="DateNaissance"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>
+
+
+@section SectionScripts{
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+}
+

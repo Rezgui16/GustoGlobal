@@ -99,3 +99,7 @@ D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingr
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Details.g.cshtml.cs
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Edit.g.cshtml.cs
 D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Ingredients\Index.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutForm.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_AuthentificationPartial.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+D:\dotnet\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
