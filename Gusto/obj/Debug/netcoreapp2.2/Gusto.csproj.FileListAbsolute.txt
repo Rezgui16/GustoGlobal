@@ -119,3 +119,13 @@ C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Ad
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Etapes\Details.g.cshtml.cs
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Etapes\Edit.g.cshtml.cs
 C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Etapes\Index.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Favoris\Create.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Favoris\Delete.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Favoris\Details.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Favoris\Edit.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Favoris\Index.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Composers\Create.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Composers\Delete.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Composers\Details.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Composers\Edit.g.cshtml.cs
+C:\Users\Soumia\Desktop\GustoGlobal\Gusto\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Composers\Index.g.cshtml.cs
