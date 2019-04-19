@@ -4443,6 +4443,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Design": "2.2.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
@@ -12094,23 +12095,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Soumia\\.nuget\\packages\\": {},
+    "C:\\Users\\jeff\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\Gusto.csproj",
+      "projectUniqueName": "D:\\dotnet\\GustoGlobal\\Gusto\\Gusto.csproj",
       "projectName": "Gusto",
-      "projectPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\Gusto.csproj",
-      "packagesPath": "C:\\Users\\Soumia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\Gusto\\obj\\",
+      "projectPath": "D:\\dotnet\\GustoGlobal\\Gusto\\Gusto.csproj",
+      "packagesPath": "C:\\Users\\jeff\\.nuget\\packages\\",
+      "outputPath": "D:\\dotnet\\GustoGlobal\\Gusto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Soumia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jeff\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12123,8 +12124,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj": {
-              "projectPath": "C:\\Users\\Soumia\\Desktop\\GustoGlobal\\GustoLib\\GustoLib.csproj"
+            "D:\\dotnet\\GustoGlobal\\GustoLib\\GustoLib.csproj": {
+              "projectPath": "D:\\dotnet\\GustoGlobal\\GustoLib\\GustoLib.csproj"
             }
           }
         }

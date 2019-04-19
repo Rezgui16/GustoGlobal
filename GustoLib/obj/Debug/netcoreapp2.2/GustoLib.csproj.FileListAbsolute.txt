@@ -28,3 +28,14 @@ C:\Users\Soumia\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.dl
 C:\Users\Soumia\Desktop\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.pdb
 C:\Users\Soumia\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.json
 C:\Users\Soumia\Desktop\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.dev.json
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.csprojAssemblyReference.cache
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.csproj.CoreCompileInputs.cache
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfoInputs.cache
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.AssemblyInfo.cs
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.dll
+D:\dotnet\GustoGlobal\GustoLib\obj\Debug\netcoreapp2.2\GustoLib.pdb
+D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.deps.json
+D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.json
+D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.runtimeconfig.dev.json
+D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.dll
+D:\dotnet\GustoGlobal\GustoLib\bin\Debug\netcoreapp2.2\GustoLib.pdb
