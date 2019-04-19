@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -68,12 +69,21 @@ namespace Gusto
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc(ConfigureRoute);
+        }
+
+        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        {
+
+            routeBuilder.MapRoute(
+                name: "areas",
+                template: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+
+            //équivalent à app.UseMvcWithDefaultRoute();
+            routeBuilder.MapRoute(
+                name: "Default",
+                template: "{controller}/{action}/{id?}",
+                defaults: new { controller = "Home", action = "Index" });
         }
     }
 }
