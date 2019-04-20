@@ -1,0 +1,10 @@
+﻿@if (!string.IsNullOrWhiteSpace(TempData["Message"]?.ToString()))
+{
+    var message = Newtonsoft.Json.JsonConvert.DeserializeObject<Gusto.Class.FlashMessage>
+    (TempData["Message"].ToString());
+
+
+    <div class="alert alert-@message.TypeMessage.ToString().ToLower()">
+        @message.Message
+    </div>
+}

@@ -48,6 +48,7 @@
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
+            @await Html.PartialAsync("_MessagePartial")
             @RenderBody()
         </main>
     </div>
