@@ -210,13 +210,9 @@ namespace Gusto.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstMidName")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("FirstMidName");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -233,6 +229,8 @@ namespace Gusto.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Pseudo");
 
                     b.Property<string>("SecurityStamp");
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GustoLib.Class.Validator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace GustoLib.Data
         [Display(Name = "Ingrédient", Prompt = "Chocolat noir")]
         [StringLength(50)]
         [Required]
+        [Unique]
         public string Name { get; set; }
 
 
