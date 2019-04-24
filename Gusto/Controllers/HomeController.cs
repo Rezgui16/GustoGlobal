@@ -5,14 +5,33 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Gusto.Models;
+using GustoLib.Data;
 
 namespace Gusto.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+
+        public HomeController(GustoDbContext context) : base(context)
+        {
+
+        }
         public IActionResult Index()
         {
-            return View();
+            var vm = new HomeViewModel();
+            using (var C = _context )
+            {
+
+              
+                vm.ListCategorie = C.Categorie.Select(p => new Categorie { Name = p.Name, ID = p.ID }).ToList();
+                vm.RecetteFive = C.Recette.OrderByDescending(x => x.Moyenne).Take(3).ToList();
+                vm.RecetteFacile = C.Recette.Where(p => p.Difficulte == "Facile").ToList();
+
+
+            }
+
+            return View(vm);
+            
         }
 
         public IActionResult Privacy()

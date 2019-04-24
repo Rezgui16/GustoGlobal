@@ -54,3 +54,14 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.jumbotron {
+    background-image: url("http://wordpress.templatemela.com/woo/WCM02/WCM020045/WP1/wp-content/uploads/2017/06/Main-banner-01.jpg");
+    background-size:cover;
+    height : 300px;
+    width: auto;
+}
+
+.TexteWhite {
+    color: white;
+}

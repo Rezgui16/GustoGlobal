@@ -1,8 +1,72 @@
-﻿@{
+﻿@model Gusto.Models.HomeViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<div class="jumbotron">
+   <div class="container">
+       <h1 class ="TexteWhite">Gusto Recette</h1>
+       <h6 class="TexteWhite">Recettes de cuisine faciles et Delicieuses</h6>
+       
+       <div class="row" style="margin-top:50px;">
+           <div class=" col-2">
+               <div class="form-group">
+
+                   <select class="form-control" id="Categorie" name="Categorie" value="Choisire une catgerie">
+                       @foreach (var p in Model.ListCategorie)
+                       {
+                           <option>@p.Name</option>
+
+                       }
+
+                   </select>
+               </div>
+           </div>
+        
+           @using (Html.BeginForm("SaveSearch", "Search", FormMethod.Post))
+           { <div class="row">
+               <div class="col-10">
+
+                   <input type="text" class="form-control" id="RechrecheRecette" placeholder="Nom de la recette" />
+
+
+               </div>
+               <div class="col-1" >
+                   <input type="submit" name="Search" value="Search" class="btn btn-light" />
+               </div>
+           </div>}
+           </div>
+           
+       </div>
+       
+   </div>
+<h2 style="margin-bottom:30px;">Nos Recettes les plus faciles</h2>
+<div class="row">
+    <div class="col-md-9">
+        <div class="row">
+            @foreach (var d in Model.RecetteFacile)
+            {
+            <article class="info-block col-md-4">
+
+                <img src=" @d.LienPhoto" width="150" height="150" />
+                <h5>@d.Titre</h5>
+                <p>@d.Description</p>
+            </article>
+
+            }
+            </div>
+        </div>
+    <div class="col-md-3">
+        <h3 style="margin-bottom:20px;">Top Recettes </h3>
+        @foreach (var d in Model.RecetteFive)
+        {<div >
+                <h6>@d.Titre</h6>
+                <label>@d.Moyenne</label>
+            </div>
+
+        }
+
+    </div>
+ </div>
