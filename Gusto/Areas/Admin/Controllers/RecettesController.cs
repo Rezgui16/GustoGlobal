@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Gusto.Controllers;
+using System.Security.Claims;
 
 namespace Gusto.Areas.Admin.Controllers
 {
@@ -20,6 +23,13 @@ namespace Gusto.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var gustoDbContext = _context.Recette.Include(r => r.Categorie).Include(r => r.User);
+            return View(await gustoDbContext.ToListAsync());
+        }
+        [Authorize(Roles = "Chef")]
+        public async Task<IActionResult> ListByUserId()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);            
+            var gustoDbContext = _context.Recette.Include(r => r.Categorie).Where(r => r.User.Id == userId);
             return View(await gustoDbContext.ToListAsync());
         }
 
@@ -57,6 +67,7 @@ namespace Gusto.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Chef,Admin")]
         public async Task<IActionResult> Create([Bind("ID,Titre,Description,Difficulte,TempsCuisson,Moyenne,Compteur,LienPhoto,UserID,CategorieID")] Recette recette)
         {
             if (ModelState.IsValid)
@@ -71,6 +82,7 @@ namespace Gusto.Areas.Admin.Controllers
         }
 
         // GET: Admin/Recettes/Edit/5
+        [Authorize(Roles = "Chef,Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -93,6 +105,7 @@ namespace Gusto.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Chef,Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Titre,Description,Difficulte,TempsCuisson,Moyenne,Compteur,LienPhoto,UserID,CategorieID")] Recette recette)
         {
             if (id != recette.ID)
@@ -126,6 +139,7 @@ namespace Gusto.Areas.Admin.Controllers
         }
 
         // GET: Admin/Recettes/Delete/5
+        [Authorize(Roles = "Chef,Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,6 +162,7 @@ namespace Gusto.Areas.Admin.Controllers
         // POST: Admin/Recettes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Chef,Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var recette = await _context.Recette.FindAsync(id);

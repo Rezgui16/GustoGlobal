@@ -45,6 +45,10 @@
                             {
                                 <a class="nav-link" asp-action="index" asp-controller="Dashboard" asp-area="admin">Administration</a>
                             }
+                            if (User.IsInRole("Chef"))
+                            {
+                                <a class="nav-link" asp-action="index" asp-controller="Dashboard" asp-area="admin">Administration</a>
+                            }
                         }
                     </li>
 
