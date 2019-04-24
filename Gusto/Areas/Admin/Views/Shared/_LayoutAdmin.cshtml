@@ -38,7 +38,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" asp-action="index" asp-controller="Categories">Lister</a>
                             <a class="dropdown-item" asp-action="create" asp-controller="Categories">Ajouter</a>
-
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -48,10 +47,28 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" asp-action="index" asp-controller="Ingredients">Lister</a>
                             <a class="dropdown-item" asp-action="create" asp-controller="Ingredients">Ajouter</a>
-
                         </div>
                     </li>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Recettes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <a class="dropdown-item" asp-action="index" asp-controller="Recettes">Lister</a>
+                                    <a class="dropdown-item" asp-action="create" asp-controller="Recettes">Ajouter</a>
+                                }
+                                if (User.IsInRole("Chef"))
+                                {
+                                    <a class="dropdown-item" asp-action="listByUserId" asp-controller="Recettes">Lister</a>
+                                    <a class="dropdown-item" asp-action="create" asp-controller="Recettes">Ajouter</a>
+                                }
+                            }
+                        </div>
+                    </li>
                 </ul>
                 @await Html.PartialAsync("_AuthentificationPartial")
             </div>

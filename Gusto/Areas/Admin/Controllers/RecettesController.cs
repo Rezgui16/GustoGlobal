@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Gusto.Controllers;
+using System.Security.Claims;
 
 namespace Gusto.Areas.Admin.Controllers
 {
@@ -20,6 +23,13 @@ namespace Gusto.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var gustoDbContext = _context.Recette.Include(r => r.Categorie).Include(r => r.User);
+            return View(await gustoDbContext.ToListAsync());
+        }
+
+        public async Task<IActionResult> ListByUserId()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);            
+            var gustoDbContext = _context.Recette.Include(r => r.Categorie).Where(r => r.User.Id == userId);
             return View(await gustoDbContext.ToListAsync());
         }
 
