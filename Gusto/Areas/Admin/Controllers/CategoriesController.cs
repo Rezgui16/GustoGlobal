@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gusto.Areas.Admin.Controllers
 {
@@ -40,6 +41,7 @@ namespace Gusto.Areas.Admin.Controllers
         }
 
         // GET: Admin/Categories/Create
+        [Authorize(Roles="Admin")]
         public IActionResult Create()
         {
             return View();

@@ -13,11 +13,16 @@ namespace Gusto.Controllers
     {
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
+        private RoleManager<IdentityRole> roleManager;
 
-        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager)
+        public AccountController(
+            SignInManager<User> signInManager, 
+            UserManager<User> userManager, 
+            RoleManager<IdentityRole> roleManager)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
+            this.roleManager = roleManager;
         }
 
         [HttpGet]
@@ -42,6 +47,45 @@ namespace Gusto.Controllers
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    // créer des comptes Admin
+                    //if (!await roleManager.RoleExistsAsync("Admin"))
+                    //{
+                    //    var users = new IdentityRole("Admin");
+                    //    var res = await roleManager.CreateAsync(users);
+                    //    if (res.Succeeded)
+                    //    {
+                    //        await userManager.AddToRoleAsync(user, "Admin");
+                    //        await signInManager.SignInAsync(user, isPersistent: false);
+                    //    }
+                    //}
+
+                    // créer des comptes Chef
+                    //if (!await roleManager.RoleExistsAsync("Chef"))
+                    //{
+                    //    var users = new IdentityRole("Chef");
+                    //    var res = await roleManager.CreateAsync(users);
+                    //    if (res.Succeeded)
+                    //    {
+                    //        await userManager.AddToRoleAsync(user, "Chef");
+                    //        await signInManager.SignInAsync(user, isPersistent: false);
+                    //    }
+                    //}
+
+                    //créer des comptes User
+                    //if (!await roleManager.RoleExistsAsync("User"))
+                    //{
+                    //    var users = new IdentityRole("User");
+                    //    var res = await roleManager.CreateAsync(users);
+                    //    if (res.Succeeded)
+                    //    {
+                    //        await userManager.AddToRoleAsync(user, "User");
+                    //        await signInManager.SignInAsync(user, isPersistent: false);
+                    //    }
+                    //}
+
+                    //créer des comptes par défaut
+                    await userManager.AddToRoleAsync(user, "User");
+                    await signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("index", "home");
                 }
 

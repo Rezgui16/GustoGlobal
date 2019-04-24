@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gusto.Areas.Admin.Controllers
 {
@@ -43,6 +44,7 @@ namespace Gusto.Areas.Admin.Controllers
         }
 
         // GET: Admin/Recettes/Create
+        [Authorize(Roles="Chef,Admin")]
         public IActionResult Create()
         {
             ViewData["CategorieID"] = new SelectList(_context.Categorie, "ID", "ID");
