@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GustoLib.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gusto.Areas.Admin.Controllers
-{  
+{
+    [Authorize]
     public class AvisController : BaseAdminController
     {
         public AvisController(GustoDbContext context) : base(context)
