@@ -38,6 +38,15 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="Ingredients" asp-area="admin">Ingrédients</a>
                     </li>
+                    <li class="nav-item">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                                <a class="nav-link" asp-action="index" asp-controller="Dashboard" asp-area="admin">Administration</a>
+                            }
+                        }
+                    </li>
 
                 </ul>
                 @await Html.PartialAsync("_AuthentificationPartial")
