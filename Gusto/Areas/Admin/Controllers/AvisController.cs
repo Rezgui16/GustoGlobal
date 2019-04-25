@@ -83,7 +83,7 @@ namespace Gusto.Areas.Admin.Controllers
                 return NotFound();
             }
             ViewData["RecetteID"] = new SelectList(_context.Recette, "ID", "ID", avis.RecetteID);
-            ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", avis.UserID);
+            ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", avis.UserID);            
             return View(avis);
         }
 
@@ -121,6 +121,7 @@ namespace Gusto.Areas.Admin.Controllers
             }
             ViewData["RecetteID"] = new SelectList(_context.Recette, "ID", "ID", avis.RecetteID);
             ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", avis.UserID);
+            DisplayMessage("Votre avis a bien été modifié", Class.TypeMessage.SUCCESS);
             return View(avis);
         }
 

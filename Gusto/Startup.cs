@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Gusto.Class;
 using GustoLib.Data;
@@ -14,6 +16,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Gusto
 {
@@ -72,6 +75,33 @@ namespace Gusto
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //services.AddSwaggerGen(x =>
+            //{
+            //    x.SwaggerDoc("v1", new Info
+            //    {
+            //        Version = "v1",
+            //        Title = "catalogue de recettes",
+            //        Description = "Fait en .Net Core",
+            //        TermsOfService = "None",
+            //        Contact = new Contact
+            //        {
+            //            Name = "toto",
+            //            Email = "toto@ynov.com",
+            //            Url = "http://www.google.fr"
+            //        },
+            //        License = new License
+            //        {
+            //            Name = "a pas",
+            //            Url = "a pas"
+            //        }
+            //    });
+
+            //    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            //    x.IncludeXmlComments(xmlPath);
+
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,7 +119,8 @@ namespace Gusto
             }
 
             app.UseAuthentication();
-
+            //app.UseSwagger();
+            //app.UseSwaggerUI(x => x.SwaggerEndpoint("/swagger/v1/swagger.json", "Recettes V1"));
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

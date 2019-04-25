@@ -11,19 +11,24 @@
 </p>
 
 
-<div class="col-md-9">
+<div class="col-md-12">
     <div class="row">
         @foreach (var item in Model)
 
         {
-            <a asp-action="Details" asp-route-id="@item.ID">
-                <article class="info-block col-md-4">
 
-                    <img src=" @item.LienPhoto" width="150" height="150" />
-                    <h5>@item.Titre</h5>
-                    <p>@item.Description</p>
-                </article>
-            </a>
+            <article class="info-block col-md-4">
+
+                <img src=" @item.LienPhoto" width="150" height="150" />
+                <h6>@item.Titre</h6>
+                <p>@item.Description</p>
+                <form asp-action="Details" asp-route-id="@item.ID">
+                    <div class="form-group">
+                        <input type="submit" value="Details" class="btn btn-primary" />
+                    </div>
+                </form>
+            </article>
+
         }
     </div>
 </div>

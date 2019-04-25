@@ -122,6 +122,7 @@ namespace Gusto.Areas.Admin.Controllers
             }
             ViewData["RecetteID"] = new SelectList(_context.Recette, "ID", "ID", note.RecetteID);
             ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", note.UserID);
+            DisplayMessage("Votre note sur cette recette a bien été modifiée", Class.TypeMessage.SUCCESS);
             return View(note);
         }
 

@@ -111,6 +111,7 @@ namespace Gusto.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            DisplayMessage("L'ingrédient a bien été modifié", Class.TypeMessage.SUCCESS);
             return View(ingredient);
         }
 
