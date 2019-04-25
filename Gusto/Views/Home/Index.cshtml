@@ -57,7 +57,9 @@
             <article class="info-block col-md-4">
 
                 <img src=" @d.LienPhoto" width="150" height="150" />
-                <h5>@d.Titre</h5>
+                <h5> @Html.ActionLink(d.Titre, "AfficherRecette", "Home", new { IdRecette = d.ID }, null)</h5>
+               
+                
                 <p>@d.Description</p>
             </article>
 
@@ -67,10 +69,11 @@
     <div class="col-md-3">
         <h3 style="margin-bottom:20px;">Top Recettes </h3>
         @foreach (var d in Model.RecetteFive)
-        {<div >
-                <h6>@d.Titre</h6>
-                <label>@d.Moyenne</label>
-            </div>
+        {<div>
+             <h6> @Html.ActionLink(d.Titre, "AfficherRecette", "Home", new { IdRecette = d.ID }, null)</h6>
+ 
+    <label>@d.Moyenne</label>
+</div>
 
         }
 

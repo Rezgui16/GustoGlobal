@@ -38,7 +38,7 @@ namespace Gusto.Controllers
             var vm = new SearchViewModel();
             using (var C= _context)
             {
-                vm.SearchRecetteResult = C.Recette.Where(p => p.Titre == RechrecheRecette).ToList();
+                vm.SearchRecetteResult = C.Recette.Where(p => p.Titre.Contains(RechrecheRecette)).ToList();
                 
             }
 
@@ -54,6 +54,35 @@ namespace Gusto.Controllers
                     }
             return View(vm);
         }
+        public IActionResult AfficherRecette(int IdRecette)
+        {
+            var vm = new RecetteViewModel();
+            using(var C= _context)
+            {
+                List<Composer> k = new List<Composer>();
+
+                
+                vm.ListEtape = C.Etape.Where(p => p.RecetteID == IdRecette).ToList();
+                vm.recette = C.Recette.Where(p => p.ID == IdRecette).FirstOrDefault();
+              
+               
+
+                vm.ListIngredient = C.Ingredient.Join(C.Composer, p => p.ID, 
+                    x => x.IngredientID, 
+                    (p, x) => new Ingredient { Name = p.Name, Unite = p.Unite })
+                    .Where(p => p.ID == IdRecette).ToList();
+     
+
+
+                
+
+            }
+
+            return View(vm);
+        }
+
+
+
         public IActionResult Privacy()
         {
             return View();

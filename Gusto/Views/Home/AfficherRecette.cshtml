@@ -1,0 +1,22 @@
+﻿@model Gusto.Models.RecetteViewModel
+@{
+    ViewData["Title"] = "AfficherRecette";
+}
+
+<h1>Afficher Recette </h1>
+
+<h1> @Model.recette.Titre</h1>
+<img  src="@Model.recette.LienPhoto"/>
+<p>@Model.recette.Description</p>
+
+@foreach (var p in Model.ListIngredient)
+{
+   <p>@p.Name</p>
+   <p>@p.Unite</p>
+}
+
+@foreach (var p in Model.ListEtape)
+{
+    <h5>@p.Nom</h5>
+    <p>@p.Instruction</p>
+}

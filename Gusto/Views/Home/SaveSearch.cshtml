@@ -10,7 +10,7 @@
     {
         <article class="info-block col-md-4">
             <img src=" @d.LienPhoto" width="150" height="150" />
-            <h5>@d.Titre</h5>
+            <h5>@Html.ActionLink(d.Titre, "AfficherRecette", "Home", new { IdRecette = d.ID }, null)</h5>
             <p>@d.Description</p>
         </article>
 
