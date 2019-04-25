@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Gusto.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Chef,Admin")]
     public class CategoriesController : BaseAdminController
     {
         public CategoriesController(GustoDbContext context) : base(context)
@@ -116,6 +117,17 @@ namespace Gusto.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            //using (var C = _context)
+            //{
+            //    var t = C.Categorie.SingleOrDefault(p => p.ID == categorie.ID);
+            //    if (t != null)
+            //    {
+            //        t.Description = categorie.Description;
+            //        C.SaveChanges();
+            //    }
+            //}
+
 
             DisplayMessage("Catégorie modifiée", Class.TypeMessage.SUCCESS);
             return View(categorie);

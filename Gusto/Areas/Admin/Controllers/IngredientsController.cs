@@ -16,7 +16,7 @@ namespace Gusto.Areas.Admin.Controllers
         public IngredientsController(GustoDbContext context) : base(context)
         {
         }
-
+        
         // GET: Admin/Ingredients
         public async Task<IActionResult> Index()
         {
