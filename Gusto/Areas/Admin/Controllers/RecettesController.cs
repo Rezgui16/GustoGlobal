@@ -74,10 +74,12 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 _context.Add(recette);
                 await _context.SaveChangesAsync();
+                DisplayMessage("Recette créée", Class.TypeMessage.SUCCESS);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategorieID"] = new SelectList(_context.Categorie, "ID", "ID", recette.CategorieID);
-            ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", recette.UserID);
+            ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", recette.UserID);            
+            DisplayMessage("Recette non valide", Class.TypeMessage.DANGER);
             return View(recette);
         }
 

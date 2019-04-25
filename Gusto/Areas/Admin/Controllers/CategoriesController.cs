@@ -80,7 +80,6 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            DisplayMessage("Catégorie modifiée", Class.TypeMessage.SUCCESS);
             return View(categorie);
         }
 
@@ -117,6 +116,8 @@ namespace Gusto.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            DisplayMessage("Catégorie modifiée", Class.TypeMessage.SUCCESS);
             return View(categorie);
         }
 

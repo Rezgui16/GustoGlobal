@@ -58,8 +58,10 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 _context.Add(ingredient);
                 await _context.SaveChangesAsync();
+                DisplayMessage("Ingrédient créé", Class.TypeMessage.SUCCESS);
                 return RedirectToAction(nameof(Index));
             }
+            DisplayMessage("Ingrédient non valide", Class.TypeMessage.DANGER);
             return View(ingredient);
         }
 
