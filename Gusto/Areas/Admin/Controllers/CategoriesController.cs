@@ -117,6 +117,17 @@ namespace Gusto.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+            //using (var C = _context)
+            //{
+            //    var t = C.Categorie.SingleOrDefault(p => p.ID == categorie.ID);
+            //    if (t != null)
+            //    {
+            //        t.Description = categorie.Description;
+            //        C.SaveChanges();
+            //    }
+            //}
+
+
             DisplayMessage("Catégorie modifiée", Class.TypeMessage.SUCCESS);
             return View(categorie);
         }
