@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Gusto.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Chef,Admin")]
     public class CategoriesController : BaseAdminController
     {
         public CategoriesController(GustoDbContext context) : base(context)
