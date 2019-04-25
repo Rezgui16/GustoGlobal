@@ -1,0 +1,19 @@
+﻿@model Gusto.Models.SearchViewModel
+@{
+    ViewData["Title"] = "SaveSearch";
+}
+
+<h1>Resultat de la recherche Search </h1>
+
+<div class="Row">
+    @foreach (var d in Model.SearchRecetteResult)
+    {
+        <article class="info-block col-md-4">
+            <img src=" @d.LienPhoto" width="150" height="150" />
+            <h5>@d.Titre</h5>
+            <p>@d.Description</p>
+        </article>
+
+    }
+
+</div>
