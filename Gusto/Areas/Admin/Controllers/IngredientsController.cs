@@ -58,8 +58,10 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 _context.Add(ingredient);
                 await _context.SaveChangesAsync();
+                DisplayMessage("Ingrédient créé", Class.TypeMessage.SUCCESS);
                 return RedirectToAction(nameof(Index));
             }
+            DisplayMessage("Ingrédient non valide", Class.TypeMessage.DANGER);
             return View(ingredient);
         }
 
@@ -111,6 +113,7 @@ namespace Gusto.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            DisplayMessage("L'ingrédient a bien été modifié", Class.TypeMessage.SUCCESS);
             return View(ingredient);
         }
 

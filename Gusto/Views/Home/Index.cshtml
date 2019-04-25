@@ -8,14 +8,14 @@
 <div class="jumbotron">
     <div class="container">
         <h1 class="TexteWhite">Gusto Recette</h1>
-        <h6 class="TexteWhite">Recettes de cuisine faciles et Delicieuses</h6>
+        <h6 class="TexteWhite">Recettes de cuisine faciles et délicieuses</h6>
         @using (Html.BeginForm("CatSearch", "Home", FormMethod.Post))
         {
         <div class="row" style="margin-top:50px;">
            
             <div class="col-3">
                 <div class="form-group">
-                    <select class="form-control" id="Categorie" name="Categorie" value="Choisire une catgerie">
+                    <select class="form-control" id="Categorie" name="Categorie" value="Choisir une catégorie">
                         @foreach (var p in Model.ListCategorie)
                         {
                             <option  value="@p.ID">@p.Name</option>
@@ -45,7 +45,7 @@
                 </div>}
         </div>
 
-        </div>
+</div>
        
  
 <h2 style="margin-bottom:30px;">Nos Recettes les plus faciles</h2>
@@ -64,8 +64,8 @@
             </article>
 
             }
-            </div>
         </div>
+    </div>
     <div class="col-md-3">
         <h3 style="margin-bottom:20px;">Top Recettes </h3>
         @foreach (var d in Model.RecetteFive)

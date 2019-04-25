@@ -59,8 +59,10 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 _context.Add(categorie);
                 await _context.SaveChangesAsync();
+                DisplayMessage("Catégorie créée", Class.TypeMessage.SUCCESS);
                 return RedirectToAction(nameof(Index));
             }
+            DisplayMessage("Catégorie non valide", Class.TypeMessage.DANGER);
             return View(categorie);
         }
 
@@ -114,6 +116,8 @@ namespace Gusto.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            DisplayMessage("Catégorie modifiée", Class.TypeMessage.SUCCESS);
             return View(categorie);
         }
 

@@ -9,75 +9,26 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Difficulte)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempsCuisson)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Moyenne)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Compteur)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LienPhoto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categorie)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Difficulte)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempsCuisson)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Moyenne)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Compteur)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LienPhoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categorie.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+<div class="col-md-12">
+    <div class="row">
+        @foreach (var item in Model)
+
+        {
+
+            <article class="info-block col-md-4">
+
+                <img src=" @item.LienPhoto" width="150" height="150" />
+                <h6>@item.Titre</h6>
+                <p>@item.Description</p>
+                <form asp-action="Details" asp-route-id="@item.ID">
+                    <div class="form-group">
+                        <input type="submit" value="Details" class="btn btn-primary" />
+                    </div>
+                </form>
+            </article>
+
+        }
+    </div>
+</div>

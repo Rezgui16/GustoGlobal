@@ -63,10 +63,12 @@ namespace Gusto.Areas.Admin.Controllers
             {
                 _context.Add(note);
                 await _context.SaveChangesAsync();
+                DisplayMessage("La note a bien été prise en compte", Class.TypeMessage.SUCCESS);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["RecetteID"] = new SelectList(_context.Recette, "ID", "ID", note.RecetteID);
             ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", note.UserID);
+            DisplayMessage("La note n'est pas valide", Class.TypeMessage.DANGER);
             return View(note);
         }
 
@@ -122,6 +124,7 @@ namespace Gusto.Areas.Admin.Controllers
             }
             ViewData["RecetteID"] = new SelectList(_context.Recette, "ID", "ID", note.RecetteID);
             ViewData["UserID"] = new SelectList(_context.User, "Id", "Id", note.UserID);
+            DisplayMessage("Votre note sur cette recette a bien été modifiée", Class.TypeMessage.SUCCESS);
             return View(note);
         }
 
