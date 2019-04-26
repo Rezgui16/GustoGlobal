@@ -41,6 +41,7 @@ namespace GustoLib.Data
         public  Categorie Categorie { get; set; }
 
         public ICollection<Favoris> Favoris { get; set; }
+        //public virtual ICollection<File> Files { get; set; }
 
 
     }
